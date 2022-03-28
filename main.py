@@ -1,27 +1,6 @@
 from List import *
 from Functions import *
 
-
-
-prueba = Linked_list()
-prueba2 = Linked_list()
-
-
-#########################################################
-
-prueba.append(1)
-prueba.append(2)
-prueba.append(3)
-prueba.append(4)
-prueba.append(5)
-
-prueba2.append(6)
-prueba2.append(7)
-prueba2.append(8)
-
-
-prueba.print_list()
-
 print('--------------------------------')
 
 #########################################################
@@ -61,18 +40,27 @@ def Opcion(opcion):
             cota = input("Ingrese la cota del libro (ejem: MATBYZ01): ")
 
             if (not cota[0:6].isalpha) and (not cota[6:].isdigit):
-
+                print("Introduzca 6 letras y 2 digitos")
                 break
+        while True:
+            
+            print("El titulo es un nombre unico de libro con un maximo de 30 caracteres")
+            titulo = input("Ingrese el titulo del libro (ejem: El Principito): ")
+            if (not len(titulo) <= 30):
+                print("El titulo solo puede tener maximo 30 caracteres")
+                break
+                
+        while True:
 
-        print("El titulo es un nombre unico de libro con un maximo de 30 caracteres")
-        titulo = input("Ingrese el titulo del libro (ejem: El Principito): ")
+            print("El serial de 12 digitos, es un numero unico de libro puesto por la editorial")
+            serial = input("Ingrese el serial del libro (ejem: 000012345678): ")
+            
+            if (not serial.isdigit) and (not len(serial) = 12:):
+                print("Introduzca un serial de 12 digitos")
 
-        print("El serial de 12 digitos, es un numero unico de libro puesto por la editorial")
-        serial = input("Ingrese el serial del libro (ejem: 000012345678): ")
+            disponibles = input("Ingrese el numero de libros disponibles: ")
 
-        disponibles = input("Ingrese el numero de libros disponibles: ")
-
-        prestados = input("Ingrese el numero de libros prestados: ")
+            prestados = input("Ingrese el numero de libros prestados: ")
     elif int(opcion) ==2:
 
         print("buscar libro")
